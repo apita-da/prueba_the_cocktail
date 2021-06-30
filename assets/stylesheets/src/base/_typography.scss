@@ -1,0 +1,28 @@
+// Add global styles for typography
+// and define classes for UI KIT font variants here
+// For example:
+// .t-h1 {
+//   font: $f-bold rem(24) / rem(38) $f-title;
+// }
+// ...
+:root{
+    /* Colores principales */
+    --blanco : white;
+    --negro  : black;
+
+    --borde-negro : #00000050;
+
+    /* Tipografia */
+    --tipo-principal  : 'Open Sans', sans-serif;
+    --tipo-secundaria : 'Open Sans', sans-serif;
+    --tipo-terciaria  : 'Open Sans', sans-serif;
+
+
+    --background    :#f5fffd;
+
+    // --background    :#ecc9b1;
+    // --sombra1       :#c9ab96;
+    // --sombra2       :#ffe7cc;
+}
+//font-family: 'Roboto Slab', serif;
+//font-family: 'Roboto', sans-serif;

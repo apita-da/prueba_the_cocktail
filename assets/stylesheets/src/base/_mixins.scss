@@ -1,0 +1,31 @@
+// Add your sass mixins and functions here
+
+// ----- rem ----- //
+//REM conversor
+//use:
+//  .element {
+//    font-size: rem(16);
+//  }
+@function rem($size) {
+  @return #{$size / $f-base}rem;
+}
+
+@mixin flex( $a, $b, $c, $d ){
+	display			: flex;
+	flex-flow		: $a $b;
+	justify-content	: $c;
+	@if $b == 'nowrap' {
+		align-items		: $d;	
+	}@else{
+		align-content	: $d;
+	}	
+}
+
+@mixin grid ( $repetirC , $grosorC , $gap , $repetirR : initial, $grosorR : initial ){
+	display					: grid;
+	grid-template-columns	: repeat( $repetirC , $grosorC );
+	@if $repetirR != 'initial' {
+		grid-template-rows	: repeat( $repetirR , $grosorR );
+	}
+	gap: $gap ;
+}

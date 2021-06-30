@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="assets/images/favicon.svg"media="(prefers-color-scheme:dark)">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" media="(prefers-color-scheme:light)">
+    <script type="text/javascript" src="assets/javascripts/application.js" defer></script>
+    <link rel="stylesheet" href="assets/stylesheets/src/application.css" />
+    <title>Prueba</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li class="header__li"><a class="header__a" href="#tab1" title="Tab1" onclick="linkfunctionTab1()">Tab1</a>
+                <div class="header__selected1"></div></li>
+                <li class="header__li"><a class="header__a" href="#tab2" title="Tab2" onclick="linkfunctionTab2()">Tab2</a>
+                 <div class="header__selected1"></div></li>
+            </ul>
+        </nav>
+    </header> 
+    <main class="main">
+        <section class="section tab1" id="tab1">
+            <div class="tab1__center">
+                <div class="tab1__name">
+                    <h1 class="tab1__h1">HOTEL Mieres del Camín Apartamentos</h1>
+                    <div class="tab1__stars">
+                        <div class="tab1__star" ><img src="assets/images/star-orange.svg" alt="estrlla" class="tab1__img"></div>
+                        <div class="tab1__star" ><img src="assets/images/star-orange.svg" alt="estrlla" class="tab1__img"></div>
+                        <div class="tab1__star" ><img src="assets/images/star-orange.svg" alt="estrlla" class="tab1__img"></div>
+                        <div class="tab1__star" ><img src="assets/images/star-orange.svg" alt="estrlla" class="tab1__img"></div>
+    
+                    </div>
+                </div>
+                <div class="tab1__options">
+                    <div class="tab1__div">
+                        <div class="tab1__description">Solo Alojamiento</div>
+                        <div class="tab1__line"></div>
+                        <ul class="tab1__ul">
+                            <li class="tab1__li">Solo régimen</li>
+                            <li class="tab1__li">Botella de agua de bienvenida</li>
+                        </ul>
+                        <div class="tab1__button">
+                            <input type="radio" name="regimen" id="regimen" onchange="getValue(this)">
+                            <labeL for="regimen" class="tab1__reg">Elegir régimen</labeL>
+                        </div>
+                    </div>
+                    <div class="tab1__div">
+                        <div class="tab1__description">Media Pensión</div>
+                        <div class="tab1__line"></div>
+                        <ul class="tab1__ul">
+                            <li class="tab1__li">Desatuno buffet completo</li>
+                        </ul>
+                        <div class="tab1__button">
+                            <input type="radio" name="regimen" id="regimen1" onchange="getValue(this)">
+                            <labeL for="regimen1" class="tab1__reg">Elegir régimen</labeL>
+                        </div>
+                    </div>
+                    <div class="tab1__div">
+                        <div class="tab1__description">Todo incluido</div>
+                        <div class="tab1__line"></div>
+                        <ul class="tab1__ul">
+                            <li class="tab1__li">Dispondrás de comida y bebida todo el dia y durante toda tu estancia</li>
+                            <li class="tab1__li">Restaurante buffet</li>
+                            <li class="tab1__li">Snack Bar</li>
+                            <li class="tab1__li">Servicio de bares (marcas nacionales)</li>
+                        </ul>
+                        <div class="tab1__button">
+                            <input type="radio" name="regimen" id="regimen2" onchange="getValue(this)">
+                            <labeL for="regimen2" class="tab1__reg">Elegir régimen</labeL>
+                        </div>
+                    </div>
+                    <div class="tab1__div">
+                        <div class="tab1__description">Unlimited Services</div>
+                        <div class="tab1__line"></div>
+                        <ul class="tab1__ul">
+                            <li class="tab1__li">Restaurante buffet con bebidas Premium</li>
+                            <li class="tab1__li">Restaurante a la carta (una cena por estancia)</li>
+                            <li class="tab1__li">Snack Bar con bebidas Premium</li>
+                            <li class="tab1__li">Minibar incluido</li>
+                            <li class="tab1__li">Acceso a SPA y 45 minutos de masaje por persona</li>
+                            <li class="tab1__li">Actividades deportivas (acuáticas sin motor)</li>
+                            <li class="tab1__li">Caja fuerte</li>
+                            <li class="tab1__li">Parking gratuito</li>
+                        </ul>
+                        <div class="tab1__button">
+                            <input type="radio" name="regimen" id="regimen3" onchange="getValue(this)">
+                            <labeL for="regimen3" class="tab1__reg">Elegir régimen</labeL>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section tab2" id="tab2">
+            <div class="tab2__acordeon">
+                <div class="tab2__fila">
+                  <h2 class="tab2__h2">Mejora tu estancia <p class="tab2__p3">Opcional</p></h2>
+                  <div class="tab2__options">
+                      <div class="tab2__op">
+                        <div class="tab2__img"></div>
+                        <div class="tab2__text">
+                          <p class="tab2__p">Olvidese de la rutina</p>
+                          <p class="tab2__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aliquam quae   istinctio beatae accusantium velit, tempore a cumque.</p>
+                        </div>
+                        <h6 class="tab2__h6">Mas información y condiciones</h6>
+                      </div>
+                      <div class="tab2__op">
+                        <div class="tab2__img"></div>
+                        <div class="tab2__text">
+                            <p class="tab2__p">Experiencias y programas SPA con agua</p>
+                            <p class="tab2__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aliquam quae expedita assumenda dolore et officia porro veritatis unde! Culpa consequatur consectetur dolorem distinctio beatae accusantium velit, tempore a cumque.</p>
+                        </div>
+                        <div class="tab2__subop">
+                            <h6 class="tab2__h6">Mas información y condiciones</h6>
+                            <div class="tab2__grid">
+                                <p class="tab2__p">Incluye:</p>
+                                <p class="tab2__p2">
+                                    <ul class="tab2__ul">
+                                        <li class="tab2__li">dsdqwd</li>
+                                    </ul>
+                                </p>
+                                <p class="tab2__p2">
+                                    <ul class="tab2__ul">
+                                        <li class="tab2__li"></li>
+                                        <li class="tab2__li"></li>
+                                        <li class="tab2__li"></li>
+                                    </ul>
+                                </p>
+                                <p class="tab2__p2">
+                                    <ul class="tab2__ul">
+                                        <li class="tab2__li"></li>
+                                        <li class="tab2__li"></li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <p class="tab2__p2">Valores acumulables a otras promociones similares</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab2__fila">
+                    <h2 class="tab2__h2">Servicios de habitacón  <p class="tab2__p3">Opcional</p></h2>
+                    <div class="tab2__options">
+                    <p class="tab2__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ullam. At, qui! Amet officiis repudiandae, inventore provident aliquam aliquid vero possimus, facere, accusantium architecto tenetur consectetur. Sed alias consectetur distinctio?</p>
+                    </div>
+                </div>
+          
+              </div>
+        </section>
+    </main>
+    <footer class="footer"></footer>
+</body>
+</html>
