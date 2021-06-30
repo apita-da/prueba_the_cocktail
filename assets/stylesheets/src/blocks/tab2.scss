@@ -1,0 +1,167 @@
+#tab2{
+    display: none;
+}
+.tab2 {
+    &__acordeon {
+        width:90%;
+        margin: 2em auto;
+        padding: 1em 2em;
+        background-color: $c-background;
+    }
+    &__fila {
+        width:100%;
+        margin:2em 0;
+        padding: 1em;
+        border:2px solid $c-background2;
+        position: relative;
+    }
+    &__fila.open &__options{
+        height: 100vh;
+    }
+    &__tag{
+        font: {
+            family: var(--secondary-tipe);
+            weight: 500;
+            size: 14px;
+        }
+        letter-spacing: 1.25px;
+        padding: .5em;  
+        position: absolute;
+        top:0;
+        right: 0;;
+        color:white;
+        background-color: $c-featured;
+        text-transform: uppercase;
+    }
+    &__name{
+        @include flex(row, nowrap, flex-start, center);
+        padding: 1.5em;
+    }
+    &__h2 {
+        font: {
+            family: var(--primary-tipe);
+            weight: bold;
+            size: 38px;
+        }
+        color: $c-secundary;
+        margin: 0 1em;
+        &:hover{
+            cursor: pointer;
+            color: $c-secundary;
+        }
+    }
+    &__subtext{
+        font: {
+            family: var(--secondary-tipe);
+            weight: 500;
+            size: 20px;
+        }
+        color: $c-text;
+    }
+    &__arrow{
+        max-width: 5em;
+    }
+    &__options {
+        height: 0;
+        overflow: hidden;
+        transition: all .5s ease;
+        padding: 0 1em;
+        @include grid(1, 1fr, 0, 2, 0fr);
+
+    }
+    &__centered{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        border:2px solid $c-background2;
+        margin-bottom: 1em;
+    }
+    &__img{
+        @media screen and (max-width:1200px) {
+            display: none; 
+        }
+        @media screen and (max-width:780px) {
+            display: none; 
+       }
+       @media screen and (max-width:540px) {
+            display: none; 
+        }
+        @media screen and (max-width:360px) {
+            display: none; 
+       } 
+    }
+    &__text{
+        @include flex(column, wrap, flex-start, center);
+        padding: 1.5em;
+        position: relative;
+    }
+    &__h3{
+        font: {
+            family: var(--secondary-tipe);
+            weight: 700;
+            size: 16px;
+        }
+        color: $c-primary;
+        margin-bottom: .8em;
+    }
+    &__p {
+        font: {
+            family: var(--secondary-tipe);
+            weight: 400;
+            size: 20px;
+        }
+        color: $c-text;
+        width: 80%;        
+    }
+    &__subop {
+        width:100%;
+        margin:2em 0;
+    }
+    &__more-info{
+        @include flex(row, nowrap, flex-start, center);
+    }
+    &__h6 {
+        font: {
+            family: var(--secondary-tipe);
+            weight: bold;
+            size: 20px;
+        }
+        color: $c-secundary;
+        margin-right: 1em;
+        cursor: pointer;
+    }
+    &__arrow2{
+        max-width: 1em;
+    }
+    &__drop {
+        font: {
+            family: var(--secondary-tipe);
+            weight: 400;
+            size: 14px;
+        }
+        color: $c-text;
+        height: 0;
+        overflow: hidden;
+        transition: all .5s ease;
+        padding: 0  1em;
+        @include flex(row, wrap, flex-start, flex-start);
+        transform: translate(-15em, 1em);
+
+    }
+    &__subop.ver &__drop{
+        height: 40vh;
+    }
+    &__inc{
+        margin-bottom: .3em;
+    }
+    &__grid{
+       @include grid(3, 1fr, 2em, initial, initial)
+    } 
+    &__li {
+        list-style-type: disc;
+        margin: .5em .2em;
+    }
+    &__other{
+        margin-top: 5em;
+        font-weight: bold;
+    }
+}

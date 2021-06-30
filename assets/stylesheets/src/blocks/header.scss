@@ -1,0 +1,34 @@
+.header {
+    &__nav {
+        width: 90%;
+        margin: auto;
+        background-color: $c-background;
+    }
+    &__ul {
+        padding: 1em;
+        @include flex(row, nowrap, flex-end, center);
+
+    }
+    &__li {
+        font: {
+            family: var(--primary-tipe);
+            weight: 500;
+            size: 16px;
+        }
+        color: $c-secundary;
+        width: 10%;
+        @include flex(column, nowrap, center, center);
+        margin: 0 1em;
+        &:hover{
+            transition: all .5s ease;
+            color: $c-secundary-hover;
+        }
+        &.selected{
+           color: $c-secundary-hover;
+            border-bottom: 2px solid $c-secundary-hover;
+        }
+    }
+    &__a {
+        padding: 0.5em;
+    }
+}

@@ -65,11 +65,8 @@ form , input , textarea , select , button {
 }
 
 body {
-  font-family: var(--tipo-principal);
-  font-size: 100%;
   min-height: 100vh;
-  background-color: var(--blanco);
-  color: var(--negro);
+  background-color: $c-background2;
   hyphens: auto;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;

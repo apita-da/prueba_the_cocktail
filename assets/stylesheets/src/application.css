@@ -1,7 +1,6 @@
 :root {
-  /* Tipografia */
-  --tipo-principal: "Roboto Slab", serif;
-  --tipo-secundaria: "Roboto", sans-serif;
+  --primary-tipe: "Roboto Slab", serif;
+  --secondary-tipe: "Roboto", serif;
 }
 
 * {
@@ -100,11 +99,8 @@ form, input, textarea, select, button {
 }
 
 body {
-  font-family: var(--tipo-principal);
-  font-size: 100%;
   min-height: 100vh;
-  background-color: var(--blanco);
-  color: var(--negro);
+  background-color: #FAFAFA;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
@@ -116,6 +112,7 @@ body {
 .header__nav {
   width: 90%;
   margin: auto;
+  background-color: #FFFFFF;
 }
 .header__ul {
   padding: 1em;
@@ -134,6 +131,10 @@ body {
           align-items: center;
 }
 .header__li {
+  font-family: var(--primary-tipe);
+  font-weight: 500;
+  font-size: 16px;
+  color: #0C75c5;
   width: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,11 +154,11 @@ body {
 .header__li:hover {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  color: blue;
+  color: #108ded;
 }
 .header__li.selected {
-  color: blue;
-  border-bottom: 2px solid blue;
+  color: #108ded;
+  border-bottom: 2px solid #108ded;
 }
 .header__a {
   padding: 0.5em;
@@ -183,7 +184,17 @@ body {
   padding: 1.2em;
 }
 .tab1__h1 {
+  font-family: var(--primary-tipe);
+  font-weight: bold;
+  font-size: 30px;
+  color: #003970;
   margin: 0 1em;
+}
+.tab1__h1 span {
+  font-family: var(--primary-tipe);
+  font-weight: 500;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 .tab1__stars {
   display: -webkit-box;
@@ -208,7 +219,8 @@ body {
   width: 85%;
 }
 .tab1__options {
-  min-height: 82vh;
+  min-height: 85vh;
+  padding: 1em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 3em 1fr 3em 1fr 3em 1fr;
@@ -256,8 +268,10 @@ body {
   width: 100%;
   min-height: 80vh;
   margin: 0 1em;
+  padding: 1em;
   position: relative;
   border: 1px solid #FAFAFA;
+  background-color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,20 +289,28 @@ body {
   transition: all 0.4s ease;
 }
 .tab1__div.selected {
-  border: 2px solid #0C75c5;
+  border: 2px solid #0a5397;
 }
 .tab1__description {
+  font-family: var(--secundary-tipe);
+  font-weight: 700;
+  font-size: 16px;
+  color: #003970;
   padding: 1em 0;
 }
 .tab1__line {
   width: 5em;
-  border: 1px solid black;
+  border: 1px solid #003970;
 }
 .tab1__ul {
   width: 90%;
   padding: 0 1em;
 }
 .tab1__li {
+  font-family: var(--secundary-tipe);
+  font-weight: 500;
+  font-size: 18px;
+  color: #003970;
   list-style-type: disc;
   margin: 1em 0.2em;
 }
@@ -325,7 +347,7 @@ body {
   background-color: #FAFAFA;
 }
 .tab1 .radio.selected {
-  border: 2px solid #0C75c5;
+  border: 2px solid #0a5397;
 }
 .tab1 .radio .radio__input input[type=radio] {
   display: -webkit-box;
@@ -371,31 +393,60 @@ body {
   width: 100%;
   margin: 2em 0;
   padding: 1em;
-  border: 1px solid green;
+  border: 2px solid #FAFAFA;
+  position: relative;
 }
 .tab2__fila.open .tab2__options {
   height: 100vh;
 }
-.tab2__h2 {
-  width: 100%;
-  padding: 1em;
+.tab2__tag {
+  font-family: var(--secondary-tipe);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1.25px;
+  padding: 0.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: #BE2227;
+  text-transform: uppercase;
+}
+.tab2__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-right: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5em;
+}
+.tab2__h2 {
+  font-family: var(--primary-tipe);
+  font-weight: bold;
+  font-size: 38px;
+  color: #0C75c5;
+  margin: 0 1em;
+}
+.tab2__h2:hover {
   cursor: pointer;
+  color: #0C75c5;
 }
 .tab2__subtext {
-  margin-left: 1em;
+  font-family: var(--secondary-tipe);
+  font-weight: 500;
+  font-size: 20px;
+  color: #4E5055;
+}
+.tab2__arrow {
+  max-width: 5em;
 }
 .tab2__options {
   height: 0;
@@ -464,24 +515,59 @@ body {
   position: relative;
 }
 .tab2__h3 {
+  font-family: var(--secondary-tipe);
+  font-weight: 700;
+  font-size: 16px;
+  color: #003970;
   margin-bottom: 0.8em;
 }
 .tab2__p {
-  width: 45%;
+  font-family: var(--secondary-tipe);
+  font-weight: 400;
+  font-size: 20px;
+  color: #4E5055;
+  width: 80%;
 }
 .tab2__subop {
   width: 100%;
   margin: 2em 0;
 }
+.tab2__more-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .tab2__h6 {
+  font-family: var(--secondary-tipe);
+  font-weight: bold;
+  font-size: 20px;
+  color: #0C75c5;
+  margin-right: 1em;
   cursor: pointer;
 }
+.tab2__arrow2 {
+  max-width: 1em;
+}
 .tab2__drop {
+  font-family: var(--secondary-tipe);
+  font-weight: 400;
+  font-size: 14px;
+  color: #4E5055;
   height: 0;
   overflow: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  padding: 0em 1em;
+  padding: 0 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -494,9 +580,11 @@ body {
           justify-content: flex-start;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  -webkit-transform: translate(-15em, 1em);
+          transform: translate(-15em, 1em);
 }
 .tab2__subop.ver .tab2__drop {
-  height: 30vh;
+  height: 40vh;
 }
 .tab2__inc {
   margin-bottom: 0.3em;
@@ -510,7 +598,7 @@ body {
 }
 .tab2__li {
   list-style-type: disc;
-  margin: 0.2em 0.2em;
+  margin: 0.5em 0.2em;
 }
 .tab2__other {
   margin-top: 5em;

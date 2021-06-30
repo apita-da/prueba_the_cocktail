@@ -3,33 +3,6 @@
 // ...
 'use strict'; 
 
-let divs         = document.querySelectorAll('.tab1__div')
-let radio        = document.querySelectorAll('.radio')
-
-
-function getValue(radio) {
-  console.log(radio.value);
-}
-function checked(){
-  divs.forEach((oneDivs, i) => {
-    divs[i].addEventListener('click', () => {
-        divs.forEach((oneDivs, i) =>{
-            divs[i].classList.remove('selected')
-        })
-        divs[i].classList.add('selected')
-    })
-  })
-  radio.forEach((oneradio, i) => {
-    radio[i].addEventListener('click', () => {
-        radio.forEach((oneradio, i) =>{
-            radio[i].classList.remove('selected')
-        })
-        radio[i].classList.add('selected')
-    })
-  })
-}
-
-
 let tabs         = document.querySelectorAll('.header__li')
 
 tabs.forEach((oneTabs, i) => {
@@ -55,7 +28,34 @@ function linkfunctionTab2() {
     tab2.style.display = 'block'
 }
 
+let divs         = document.querySelectorAll('.tab1__div')
+let radio        = document.querySelectorAll('.radio')
+
+function getValue(radio) {
+  console.log(radio.value);
+}
+function checked(){
+  divs.forEach((oneDivs, i) => {
+    divs[i].addEventListener('click', () => {
+        divs.forEach((oneDivs, i) =>{
+            divs[i].classList.remove('selected')
+        })
+        divs[i].classList.add('selected')
+    })
+  })
+  radio.forEach((oneradio, i) => {
+    radio[i].addEventListener('click', () => {
+        radio.forEach((oneradio, i) =>{
+            radio[i].classList.remove('selected')
+        })
+        radio[i].classList.add('selected')
+    })
+  })
+
+}
+
 var fila = document.querySelectorAll('.tab2__fila');
+
 fila.forEach(function (cadaFila, i) {
   fila[i].addEventListener('click', function () {
     fila.forEach(function (cadaFila, i) {
@@ -66,6 +66,7 @@ fila.forEach(function (cadaFila, i) {
 });
 
 var subfila1 = document.querySelectorAll('.op1');
+
 subfila1.forEach(function (cadaFila, i) {
   subfila1[i].addEventListener('click', function () {
     subfila1.forEach(function (cadasubFila1, i) {
@@ -75,6 +76,7 @@ subfila1.forEach(function (cadaFila, i) {
 });
 
 var subfila2 = document.querySelectorAll('.op2');
+
 subfila2.forEach(function (cadaFila, i) {
   subfila2[i].addEventListener('click', function () {
     subfila2.forEach(function (cadasubFila2, i) {

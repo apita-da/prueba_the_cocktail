@@ -2,13 +2,13 @@
 
 // ----- rem ----- //
 //REM conversor
-//use:
+// use:
 //  .element {
 //    font-size: rem(16);
 //  }
-@function rem($size) {
-  @return #{$size / $f-base}rem;
-}
+// @function rem($size) {
+//   @return #{$size / $f-base}rem;
+// }
 
 @mixin flex( $a, $b, $c, $d ){
 	display			: flex;

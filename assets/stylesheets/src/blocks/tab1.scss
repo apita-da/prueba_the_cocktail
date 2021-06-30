@@ -1,0 +1,150 @@
+.tab1 {
+    &__center {
+        width: 90%;
+        margin: auto;
+    }
+    &__name {
+        @include flex(row, wrap,center, center);
+        padding: 1.2em; 
+    }
+    &__h1 {
+        font: {
+            family: var(--primary-tipe);
+            weight: bold;
+            size: 30px;
+        }
+        color: $c-primary;
+        margin: 0 1em;
+        span{
+            font: {
+                family: var(--primary-tipe);
+                weight: 500;
+                size: 30px;
+            }
+            text-transform: uppercase;
+        }
+    }
+    &__stars {
+        @include flex(row, nowrap,center, center);
+    }
+    &__star {
+        margin-bottom: .5em;
+        padding: 0 .1em;
+    }
+    &__img {
+        width: 85%;
+    }
+    &__options {
+        min-height: 85vh;
+        padding: 1em;
+        @include grid(4, 1fr, 3em, initial, initial);
+        position: relative;
+       @media screen and (max-width:1200px) {
+            @include grid(3, .8fr, 1em, initial, initial); 
+        }
+        @media screen and (max-width:780px) {
+            @include grid(2, .8fr, 1em, initial, initial); 
+       }
+       @media screen and (max-width:540px) {
+            @include grid(1, .8fr, 1em, initial, initial); 
+        }
+        @media screen and (max-width:360px) {
+            @include grid(1, .8fr, 1em, initial, initial); 
+       } 
+    }
+    &__div {
+        width: 100%;
+        min-height: 80vh;
+        margin: 0 1em;
+        padding: 1em;
+        position: relative;
+        border: 1px solid $c-background2;
+        background-color: $c-background;
+
+        @include flex(column, nowrap,flex-start, center);
+        transition: all .4s ease;
+        &.selected{
+            border: 2px solid $c-primar-hover;
+         }
+    }
+    &__description {
+        font: {
+            family: var(--secundary-tipe);
+            weight: 700;
+            size: 16px;
+        }
+        color: $c-primary;
+        padding: 1em 0;
+    }
+    &__line{
+        width: 5em;
+        border: 1px solid $c-primary;
+    }
+    &__ul {
+        width: 90%;
+        padding: 0 1em;
+    }
+    &__li {
+        font: {
+            family: var(--secundary-tipe);
+            weight: 500;
+            size: 18px;
+        }
+        color: $c-primary;
+        list-style-type: disc;
+        margin: 1em .2em;
+
+    }
+    &__button{
+        width: 80%;
+        @include flex(row, nowrap,flex-start, center);
+        position: absolute;
+        bottom: 1em;
+        border:1px solid saddlebrown;
+    }
+    .radio{
+        width: 80%;
+        display: grid;
+        grid-template-columns: min-content auto;
+        gap: .5em;
+        position: absolute;
+        bottom: 1em;
+        background-color: $c-background2;
+        &.selected{
+            border: 2px solid $c-primar-hover;
+         }
+
+        .radio__input{
+            input[type="radio"]{
+                display: flex;
+                opacity: 0;
+                width: .8em;
+                height: .8em;
+                &:checked + .radio__control{
+                    margin-left: 1em;
+                    background: $c-selected;
+                    border: 1.2px solid $c-selected;
+                    transition: all .4s ease;
+                }
+
+            }
+        }
+  
+        .radio__control{
+            display: block;
+            width: .8em;
+            height: .8em;
+            border-radius: 50%;
+            margin-left: 1em;
+            border: .1em solid black;
+            background: white;
+
+        }
+    }
+    &__reg{
+        width: 100%;
+        padding: .8em .8em;
+        margin-left: -.5em;
+
+    }
+}
