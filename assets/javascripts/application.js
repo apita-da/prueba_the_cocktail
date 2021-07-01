@@ -32,7 +32,8 @@ let divs         = document.querySelectorAll('.tab1__div')
 let radio        = document.querySelectorAll('.radio')
 
 function getValue(radio) {
-  console.log(radio.value);
+  console.log(radio.value)
+
 }
 function checked(){
   divs.forEach((oneDivs, i) => {
@@ -51,11 +52,7 @@ function checked(){
         radio[i].classList.add('selected')
     })
   })
-  if (divs.selected = '2px solid $c-primar-hover')
-  {
-      // getValue(radio);
-      console.log("heloooo")
-  }
+  
 }
 
 var fila = document.querySelectorAll('.tab2__fila');
