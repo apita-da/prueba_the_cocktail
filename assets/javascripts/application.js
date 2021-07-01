@@ -51,7 +51,11 @@ function checked(){
         radio[i].classList.add('selected')
     })
   })
-
+  if (divs.selected = '2px solid $c-primar-hover')
+  {
+      // getValue(radio);
+      console.log("heloooo")
+  }
 }
 
 var fila = document.querySelectorAll('.tab2__fila');
